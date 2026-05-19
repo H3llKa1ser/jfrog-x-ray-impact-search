@@ -22,5 +22,12 @@ Compile for all OS
 
 ### 4) Run to check for CVEs
 
-    x-ray_cve_check -csv PACKAGE_LIST.csv -host https://jfrog.company.com -user USERNAME -pass PASSWORD
+    x-ray_cve_check -csv packages.csv -host https://artifactory.mycompany.com -user USERNAME -pass PASSWORD
 
+### 5) Filter only Critical and High vulnerabilities
+
+    x-ray_cve_check -csv packages.csv -host https://artifactory.mycompany.com -user USERNAME -pass PASSWORD -severity Critical,High
+
+### 6) Self-signed certificate
+
+    x-ray_cve_check -csv packages.csv -host https://artifactory.mycompany.com -user USERNAME -pass PASSWORD -insecure
