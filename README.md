@@ -26,12 +26,12 @@ Compile for all OS
 
 ### 5) Run to check for CVEs
 
-    x-ray_cve_check -csv packages.csv -host https://artifactory.mycompany.com -user USERNAME -pass PASSWORD
+    x-ray_cve_check -csv cves.csv -host https://artifactory.mycompany.com -user USERNAME -pass PASSWORD
 
 ### 6) Filter only Critical and High vulnerabilities
 
-    x-ray_cve_check -csv packages.csv -host https://artifactory.mycompany.com -user USERNAME -pass PASSWORD -severity Critical,High
+    x-ray_cve_check -csv cves.csv -host https://artifactory.mycompany.com -user USERNAME -pass PASSWORD -severity Critical,High
 
 ### 7) Self-signed certificate
 
-    x-ray_cve_check -csv packages.csv -host https://artifactory.mycompany.com -user USERNAME -pass PASSWORD -insecure
+    x-ray_cve_check -csv cves.csv -host https://artifactory.mycompany.com -user USERNAME -pass PASSWORD -insecure
