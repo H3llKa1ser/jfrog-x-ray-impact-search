@@ -16,18 +16,22 @@ Compile for all OS
 
     bash build.sh
 
-### 3) Prepare the program to use it system-wide
+### 3) Make it executable
+
+    chmod +x x-ray_cve_check
+
+### 4) Prepare the program to use it system-wide
 
     sudo cp x-ray_cve_check /usr/bin/x-ray_cve_check
 
-### 4) Run to check for CVEs
+### 5) Run to check for CVEs
 
     x-ray_cve_check -csv packages.csv -host https://artifactory.mycompany.com -user USERNAME -pass PASSWORD
 
-### 5) Filter only Critical and High vulnerabilities
+### 6) Filter only Critical and High vulnerabilities
 
     x-ray_cve_check -csv packages.csv -host https://artifactory.mycompany.com -user USERNAME -pass PASSWORD -severity Critical,High
 
-### 6) Self-signed certificate
+### 7) Self-signed certificate
 
     x-ray_cve_check -csv packages.csv -host https://artifactory.mycompany.com -user USERNAME -pass PASSWORD -insecure
