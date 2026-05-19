@@ -28,10 +28,6 @@ Compile for all OS
 
     x-ray_cve_check -csv cves.csv -host https://artifactory.mycompany.com -user USERNAME -pass PASSWORD
 
-### 6) Filter only Critical and High vulnerabilities
-
-    x-ray_cve_check -csv cves.csv -host https://artifactory.mycompany.com -user USERNAME -pass PASSWORD -severity Critical,High
-
-### 7) Self-signed certificate
+### 6) Self-signed certificate
 
     x-ray_cve_check -csv cves.csv -host https://artifactory.mycompany.com -user USERNAME -pass PASSWORD -insecure
