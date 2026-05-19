@@ -31,3 +31,13 @@ Compile for all OS
 ### 6) Self-signed certificate
 
     x-ray_cve_check -csv cves.csv -host https://artifactory.mycompany.com -user USERNAME -pass PASSWORD -insecure
+
+### 7) Dry run (show actual URL request)
+
+    x-ray_cve_check -csv cves.csv -dry-run
+
+### 8) Help menu
+
+Just run without commands to get all flags
+
+    x-ray_cve_check
