@@ -12,6 +12,10 @@ Then,
 
     go build -o x-ray_cve_check x-ray_cve_check.go
 
+Compile for all OS
+
+    bash build.sh
+
 ### 3) Prepare the program to use it system-wide
 
     sudo cp x-ray_cve_check /usr/bin/x-ray_cve_check
