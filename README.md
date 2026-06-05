@@ -1,16 +1,16 @@
-# jfrog-x-ray-cve-checker
+# jfrog-x-ray-impact-search
 
 ### 1) Download
 
-    git clone https://github.com/H3llKa1ser/jfrog-x-ray-cve-checker
+    git clone https://github.com/H3llKa1ser/jfrog-x-ray-impact-search
 
 Then,
 
-    cd jfrog-x-ray-cve-checker/
+    cd jfrog-x-ray-impact-search/
 
 ### 2) Compile
 
-    go build -o x-ray_cve_check x-ray_cve_check.go
+    go build -o x-ray_impact_search x-ray_impact_search.go
 
 Compile for all OS
 
@@ -18,26 +18,32 @@ Compile for all OS
 
 ### 3) Make it executable
 
-    chmod +x x-ray_cve_check
+    chmod +x x-ray_impact_search
 
 ### 4) Prepare the program to use it system-wide
 
-    sudo cp x-ray_cve_check /usr/bin/x-ray_cve_check
+    sudo cp x-ray_impact_search /usr/bin/x-ray_impact_search
 
-### 5) Run to check for CVEs
+### 5) Search by CVE/XRAY IDs
 
-    x-ray_cve_check -csv cves.csv -host https://artifactory.mycompany.com -user USERNAME -pass PASSWORD
+    ./xray_impact_search -csv cves.csv -mode vulnerability -host https://jfrog.company.tech -user admin -pass secret
 
-### 6) Self-signed certificate
+### 6) Search by packages (your original CSV format)
 
-    x-ray_cve_check -csv cves.csv -host https://artifactory.mycompany.com -user USERNAME -pass PASSWORD -insecure
+    ./xray_impact_search -csv packages.csv -mode package -host https://jfrog.company.tech -user admin -pass secret
 
-### 7) Dry run (show actual URL request)
+### 7) Auto-detect mode
 
-    x-ray_cve_check -csv cves.csv -dry-run
+    ./xray_impact_search -csv input.csv -host https://jfrog.company.tech -user admin -pass secret
 
-### 8) Help menu
+### 8) Dry run
 
-Just run without commands to get all flags
+    ./xray_impact_search -csv packages.csv -mode package -dry-run
 
-    x-ray_cve_check
+### 9) Debug
+
+    ./xray_impact_search -csv cves.csv -mode vulnerability -debug
+
+## 10) Help
+
+    ./xray_impact_search
