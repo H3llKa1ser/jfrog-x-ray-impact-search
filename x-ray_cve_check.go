@@ -442,7 +442,7 @@ func readCVEs(c Config) ([]CVEEntry, int, int, error) {
 
             cveID = strings.ToUpper(strings.TrimSpace(cveID))
 
-            if !strings.HasPrefix(cveID, "CVE-") {
+            if !strings.HasPrefix(cveID, "CVE-") && !strings.HasPrefix(cveID, "XRAY-") {
                 errs++
                 goto nextLine
             }
@@ -465,6 +465,9 @@ func readCVEs(c Config) ([]CVEEntry, int, int, error) {
 
 func isCVEID(s string) bool {
     s = strings.ToUpper(strings.TrimSpace(s))
+    if strings.HasPrefix(s, "XRAY-") {
+        return true // Accept all XRAY-XXXXXX IDs
+    }
     if !strings.HasPrefix(s, "CVE-") {
         return false
     }
