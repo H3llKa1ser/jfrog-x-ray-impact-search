@@ -26,24 +26,24 @@ Compile for all OS
 
 ### 5) Search by CVE/XRAY IDs
 
-    ./xray_impact_search -csv cves.csv -mode vulnerability -host https://jfrog.company.tech -user admin -pass secret
+    ./x-ray_impact_search -csv cves.csv -mode vulnerability -host https://jfrog.company.tech -user admin -pass secret
 
 ### 6) Search by packages (your original CSV format)
 
-    ./xray_impact_search -csv packages.csv -mode package -host https://jfrog.company.tech -user admin -pass secret
+    ./x-ray_impact_search -csv packages.csv -mode package -host https://jfrog.company.tech -user admin -pass secret
 
 ### 7) Auto-detect mode
 
-    ./xray_impact_search -csv input.csv -host https://jfrog.company.tech -user admin -pass secret
+    ./x-ray_impact_search -csv input.csv -host https://jfrog.company.tech -user admin -pass secret
 
 ### 8) Dry run
 
-    ./xray_impact_search -csv packages.csv -mode package -dry-run
+    ./x-ray_impact_search -csv packages.csv -mode package -dry-run
 
 ### 9) Debug
 
-    ./xray_impact_search -csv cves.csv -mode vulnerability -debug
+    ./x-ray_impact_search -csv cves.csv -mode vulnerability -debug
 
 ## 10) Help
 
-    ./xray_impact_search
+    ./x-ray_impact_search
